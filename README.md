@@ -13,42 +13,42 @@ As a `guest user` - can be able to choose and select which food items they can b
 
 # Features
 
-    • User
+    • User (Organizer)
     • Login
     • Register (New User)
     • Search event
     • Process of entering events, location, date, time, food items
     • CRUD
 
-# Built 
+# Dependencies 
 
-    • Node.js
-    • Express
-    • SQLite3
-    • Knex
-    • Bcryptjs
-    • CORS
-    • Helmet
-    • JWT (JsonWebToken)
-    • Supertest
-    • Jest
+    [ ] Node.js
+    [ ] Express
+    [ ] SQLite3
+    [ ] Knex
+    [ ] Bcryptjs
+    [ ] CORS
+    [ ] Helmet
+    [ ] JWT (JsonWebToken)
+    [ ] Supertest
+    [ ] Jest
 
 # CRUD Endpoints
 
-    • GET (API running)
-    • POST (Register a user)
-    • POST (Login a user)
+    [ ] GET (API running)
+    [ ] POST (Register a user)
+    [ ] POST (Login a user)
 
 # Potluck Endpoints
 
-    • GET (Potluck by ID)
-    • POST (Add a Potluck Event)
-    • PUT (Update Event)
-    • DELETE (Remove Event by ID)
+    [ ] GET (Potluck by ID)
+    [ ] POST (Add a Potluck Event)
+    [ ] PUT (Update Event)
+    [ ] DELETE (Remove Event by ID)
 
 # Food Endpoints
 
-    • GET (All food items list)
-    • GET (Food by ID)
-    • POST (Add food by  User ID)
-    • DELETE (Food by User ID)
+    [ ] GET (All food items list)
+    [ ] GET (Food by ID)
+    [ ] POST (Add food by  User ID)
+    [ ] DELETE (Food by User ID)
