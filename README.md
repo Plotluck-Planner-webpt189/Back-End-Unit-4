@@ -1,8 +1,8 @@
-# PotLuck Planner 
+# PotLuck Planner
 
 # Mission Statement
 
-To create a web application that will allow users to a potluck event on their own profile account as well as add details needed for the potluck party, like adding food type, adding venue, time, date, and inviting new users.  New users can login and register after authorization is given and be able to check the itinerary of the event, add their own food items.
+To create a web application that will allow users to a potluck event on their own profile account as well as add details needed for the potluck party, like adding food type, adding venue, time, date, and inviting new users. New users can login and register after authorization is given and be able to check the itinerary of the event, add their own food items.
 
 What does it solve?
 
@@ -15,23 +15,24 @@ As a `guest user` - can be able to choose and select which food items they can b
 
     • User (Organizer)
     • Login
-    • Register (New User)
-    • Search event
+    • Register (New/Guest User)
+    • Search
+    • Guess user can choose food/select and browse event
     • Process of entering events, location, date, time, food items
     • CRUD
 
-# Dependencies 
+# Dependencies
 
-    [ ] Node.js
-    [ ] Express
-    [ ] SQLite3
-    [ ] Knex
-    [ ] Bcryptjs
-    [ ] CORS
-    [ ] Helmet
-    [ ] JWT (JsonWebToken)
-    [ ] Supertest
-    [ ] Jest
+    [√] Node.js
+    [√] Express
+    [√] SQLite3
+    [√] Knex
+    [√] Bcryptjs
+    [√] CORS
+    [√] Helmet
+    [√] JWT (JsonWebToken)
+    [√] Supertest
+    [√] Jest
 
 # CRUD Endpoints
 
