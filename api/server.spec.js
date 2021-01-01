@@ -1,5 +1,3 @@
-const requuest = require('supertest');
-
 const server = require('./server.js');
 
 it('must set DB environment to testing', () => {
@@ -21,7 +19,7 @@ describe('server', () => {
       expect(res.type).toMatch(/json/i);
     });
 
-    it('should return message saying server up and running with a value in the response body', async () => {
+    it('should return saying server up and running', async () => {
       const res = await requestAnimationFrame(server).get('/');
       expect(res.body.message).toBe('server up and running');
     });
