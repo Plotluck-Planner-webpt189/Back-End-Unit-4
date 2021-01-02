@@ -9,7 +9,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/potluck', (req, res) => {
-  res.json({ potluck: 'Event Planner' });
+  res.json({ event: 'Potluck Planner' });
 });
 
 const PORT = process.env.PORT || 4500;
