@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const Food = require('./foodModel');
-const UserFood = require('./userFood-Model');
+const UserFood = require('./userFoodModel');
 const db = require('../data/dbConfig');
 
 // GET list of foods

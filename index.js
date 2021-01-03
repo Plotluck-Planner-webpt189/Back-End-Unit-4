@@ -9,13 +9,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/potluck', (req, res) => {
-  res.json({ event: 'Potluck Planner' });
-});
-
-const PORT = process.env.PORT || 4500;
-
-server.listen(PORT, () => {
-  console.log(`n*** Server is listening on  port ${PORT} ***\n`);
+  res.json({ potluck: 'Party Planner' });
 });
 
 // C - create (POST)
@@ -32,4 +26,15 @@ server.post('/api/potluck', (req, res) => {
   potluck.push(potluckInfo);
 
   res.status(201).json(potluckInfo);
+});
+
+// read
+server.get('/api/potluck', (req, res) => {
+  res.status(200).json(potluck);
+});
+
+const PORT = process.env.PORT || 4500;
+
+server.listen(PORT, () => {
+  console.log(`n*** Server is listening on  port ${PORT} ***\n`);
 });
