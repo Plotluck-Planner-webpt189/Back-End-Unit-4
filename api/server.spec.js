@@ -1,6 +1,6 @@
 const server = require('./server.js');
 
-it('must set DB environment to testing', () => {
+it('must set DB environment for testing', () => {
   expect(process.env.DB_ENV).toBe('testing');
 });
 
@@ -19,9 +19,9 @@ describe('server', () => {
       expect(res.type).toMatch(/json/i);
     });
 
-    it('should return saying server up and running', async () => {
-      const res = await requestAnimationFrame(server).get('/');
-      expect(res.body.message).toBe('server up and running');
+    it('should return message server up and running', async () => {
+      const res = await request(server).get('/');
+      expect(res.body.message).toBe('server is up and running');
     });
   });
 });

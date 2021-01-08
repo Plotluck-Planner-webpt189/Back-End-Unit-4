@@ -1,11 +1,9 @@
 const express = require('express');
-const cors = require('cors');
 const helmet = require('helmet');
 
-const authenticate = require('../users/authenticate-middleware.js');
-const authRouter = require('../users/userRouter.js');
-const potluckRouter = require('../users/potluckRouter.js');
-const foodRouter = require('../foods/foodRouter.js');
+const user = require('./users/user-router.js');
+const potluck = require('./potluck/potluck-router.js');
+const food = require('./foods/food-router.js');
 
 const server = express();
 
@@ -14,12 +12,11 @@ server.use(cors());
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  res.status(200).json({ message: 'Server is up and running' });
+  res.status(200).json({ message: 'Server is running' });
 });
 
-server.use('/api/auth', authRouter);
-server.use('/api/potlucks', authenticate, potluckRouter);
-server.use('/users', organizerRouter);
-server.use('/foods', foodRouter);
+server.use('/api/users', user);
+server.use('/api/potlucks', potluck);
+server.use('/api/foods', food);
 
 module.exports = server;
