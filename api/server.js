@@ -1,9 +1,10 @@
 const express = require('express');
 const helmet = require('helmet');
+const cors = require('cors');
 
-const user = require('./users/user-router.js');
-const potluck = require('./potluck/potluck-router.js');
-const food = require('./foods/food-router.js');
+const user = require('../users/user-router');
+const potluck = require('../potlucks/potluck-router');
+const food = require('../foods/food-router.js');
 
 const server = express();
 
