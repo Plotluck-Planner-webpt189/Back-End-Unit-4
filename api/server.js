@@ -17,8 +17,7 @@ server.get('/', (req, res) => {
 });
 
 server.use('/api/users', user);
-server.use('/apipotlucks', potluck);
-server.use('/api/orgnizer', organizer);
+server.use('/api/potlucks', potluck);
 server.use('/api/foods', food);
 
 module.exports = server;
