@@ -3,7 +3,6 @@ const helmet = require('helmet');
 
 const user = require('./users/user-router.js');
 const potluck = require('./potluck/potluck-router.js');
-const organizer = require('./potlucks/organizer-router.js');
 const food = require('./foods/food-router.js');
 
 const server = express();
