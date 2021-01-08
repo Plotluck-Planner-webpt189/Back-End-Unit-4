@@ -49,7 +49,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-router.get('/', requiresAuth, (req, res) => {
+router.get('/', (req, res) => {
   User
     .find()
       .then(users => res.status(200).json(users))
@@ -59,7 +59,7 @@ router.get('/', requiresAuth, (req, res) => {
       });
 });
 
-router.get('/:id', requiresAuth, (req, res) => {
+router.get('/:id', (req, res) => {
   const { id } = req.params;
   User
     .findById(id)
