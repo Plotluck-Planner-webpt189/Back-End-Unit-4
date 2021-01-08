@@ -1,10 +1,12 @@
 const router = require('express').Router();
 
-const Food = require('./foodModel');
-const UserFood = require('./userFoodModel');
+const Food = require('../foods/food-model');
+const UsersFood = require('../foods/food-model');
 const db = require('../data/dbConfig');
 
-// GET list of foods
+module.exports = router;
+
+// to GET list of foods
 router.get('/', (req, res) => {
   Food.find()
     .then(foods => {
@@ -17,7 +19,7 @@ router.get('/', (req, res) => {
     })
 });
 
-// GET list food by ID
+// to GET list food by ID
 router.get('/:id', (req, res) => {
     const user_id = req.user.id;
     const food_id = req.params.id;
@@ -32,8 +34,8 @@ router.get('/:id', (req, res) => {
             res.status(500).send({message: 'Error retrieving food by id from database.'})
         })
   });
-
-// ADD a new food to list of foods
+ 
+// to ADD new food to list of foods
 router.post('/', validateFoodData, (req, res) => {
     let foodData = req.body;
 
@@ -48,7 +50,7 @@ router.post('/', validateFoodData, (req, res) => {
           });
 })
 
-// GET list of food by User ID
+// to GET list of food by User ID
 router.get('/user/:id', (req, res) => {
 
     console.log(req.user.id);
@@ -63,7 +65,7 @@ router.get('/user/:id', (req, res) => {
       })
   });
 
-// ADD new food to list by User ID
+// to ADD new food to list by User ID
 router.post('/user/:id', (req, res) => {
     let userFood = req.body;
     const user_id = req.user.id;
@@ -80,7 +82,7 @@ router.post('/user/:id', (req, res) => {
           });
 })
 
-// DELETE food list from User by ID
+// to DELETE food list from User by ID
 router.delete('/user/:id', (req, res) => {
     const user_id = req.user.id;
     const food_id = req.params.id;
@@ -105,5 +107,3 @@ function validateFoodData(req, res, next) {
         next();
     }
 }
-
-module.exports = router;

@@ -1,6 +1,6 @@
 const db = require('../data/dbConfig');
 
-const { add } = require('./potluckModel');
+const { add } = require('./potluck-model');
 
 describe('potlucks model', () => {
   describe('insert', () => {
@@ -9,14 +9,14 @@ describe('potlucks model', () => {
     });
 
     it('should insert a potluck', async () => {
-      await add({name:'Thanksgiving', location: 'DisneyWorld', date: '11/24/2021', 'time': '6pm'});
+      await add({name:'Thanksgiving', location: 'DisneyWorld', date: '11/24/2021', time: '6pm'});
 
       const potlucks = await db('potlucks');
       expect(potlucks).toHaveLength(1);
     });
 
     it('should insert provided potluck', async () => {
-      await add({name:'Thanksgiving', location: 'DisneyWorld', date: '11/24/2021', 'time': '6pm'});
+      await add({name:'Thanksgiving', location: 'DisneyWorld', date: '11/24/2021', time: '6pm'});
       await add({name:'Christmas', location: 'LasVegas', date: '12/24/2021', 'time': '6pm'});
 
       const potlucks = await db('potlucks');

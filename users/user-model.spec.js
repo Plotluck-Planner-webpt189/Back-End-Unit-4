@@ -1,6 +1,6 @@
 const db = require('../data/dbConfig');
 
-const { add } = require('./userModel');
+const { add } = require('./user-model');
 
 describe('users model', () => {
   describe('insert', () => {

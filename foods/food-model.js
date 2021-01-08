@@ -19,6 +19,5 @@ const add = (foodData) => {
 module.exports = {
   find,
   findById,
-  add,
-  remove, 
+  add, 
 };
