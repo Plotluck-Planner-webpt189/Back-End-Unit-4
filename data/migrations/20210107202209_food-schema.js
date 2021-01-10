@@ -1,9 +1,10 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('foods', tbl => {
-        tbl.increments('id');
-        tbl.string('name', 25).notNullable();
-        tbl.string('type').notNullable();
+      tbl.increments('id');
+      tbl.string('title', 25).notNullable();
+      tbl.string('type').notNullable();
+      tbl.integer('potluck_id').references('id').inTable('potlucks');
     });
   
 }
