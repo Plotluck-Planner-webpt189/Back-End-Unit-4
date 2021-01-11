@@ -7,14 +7,12 @@ module.exports = {
       filename: './data/potluckPlanner.db3',
     },
     useNullAsDefault: true,
-    
+
     migrations: {
       directory: './data/migrations',
     },
     seeds: {
-      migrations: {
-        directory: './data/seeds',
-      },
+      directory: './data/seeds',
     },
   },
 };
